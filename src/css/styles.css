@@ -180,6 +180,8 @@ body {
   padding: 16px;
   max-width: 240px;
   margin: 0 auto 4px;
+
+  animation: pulseScale 2000ms infinite;
 }
 
 .sale-text {
@@ -780,6 +782,8 @@ body {
   background: #9c1013;
   max-width: 240px;
   margin: 0 auto;
+
+  animation: pulseScale 2000ms infinite;
 }
 
 .garant {
@@ -1113,6 +1117,7 @@ body {
 /* footer */
 
 .footer {
+  padding-bottom: 60px;
 }
 
 .footer .container {
