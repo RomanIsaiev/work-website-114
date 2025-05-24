@@ -1,20 +1,871 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
+    <title>Диагностика дара</title>
     <link
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header"><div class="container"></div></header>
+    <header class="header">
+      <div class="container">
+        <div class="short-box">
+          <p class="short-info">[ Интенсив ]</p>
+          <p class="short-info">
+            [ старт <span id="dateElement"></span>
+            <span id="monthElement"></span> ]
+          </p>
+        </div>
+      </div>
+    </header>
     <main>
-      <section></section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="title">Диагностика дара</h1>
+          <h2 class="subtitle">как понять свой магический путь</h2>
+          <p class="desc">
+            Открой свой магический путь – чтобы не просто знать, кто ты, а
+            начать строить профессию, в которой ты на своём месте
+          </p>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-text">Узнаешь свою уникальную силу</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Поймёшь, зачем тебе этот дар</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Определишь направление развития</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Положишь начало новой жизни</p>
+            </li>
+          </ul>
+          <a class="btn" href="">Подробнее</a>
+          <p class="sale-text">скидка -90%</p>
+        </div>
+      </section>
+      <section class="bonuses">
+        <div class="container">
+          <h2 class="title">
+            Успейте присоединиться до конца обратного отсчета и
+            <span>получить подарки</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Медитация</span> на активацию интуиции
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-02-1x.png 1x,
+                    ./src/img/bonuses/bonus-02-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-02-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Чек-лист</span> «10 признаков открытия дара»
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-03-1x.png 1x,
+                    ./src/img/bonuses/bonus-03-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-03-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Гайд</span> «Как усилить связь со своим Высшим Я за 7
+                дней»
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-one" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="for-whom">
+        <div class="container">
+          <h2 class="title">Для кого</h2>
+          <h2 class="subtitle">этот курс</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-number">01</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Для женщин, которые чувствуют в себе особенные способности,
+                </p>
+                <p class="item-text">
+                  но не понимают, в какую сторону их развивать
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">02</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Для тех, кто уже изучал эзотерические практики,
+                </p>
+                <p class="item-text">
+                  но до сих пор не нашёл своего настоящего пути
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">03</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Для тех, кто устал от бесконечных курсов
+                </p>
+                <p class="item-text">
+                  без реальных результатов и хочет, наконец, точно определить
+                  свою силу
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">04</p>
+              <div class="text-box">
+                <p class="item-title">Для активных, целеустремлённых людей,</p>
+                <p class="item-text">
+                  готовых раскрывать свои способности и инвестировать в своё
+                  развитие
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">05</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Для тех, кто хочет помогать людям через свои таланты
+                </p>
+                <p class="item-text">
+                  и зарабатывать с помощью своих способностей
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="author">
+        <h2 class="title">Кто я?</h2>
+        <picture
+          ><source
+            srcset="
+              ./src/img/author/author-1x.png 1x,
+              ./src/img/author/author-2x.png 2x
+            "
+            width="100%"
+            height="auto" />
+          <img
+            class="bg-image"
+            src="./src/img/author/author-1x.png"
+            alt="author"
+            width="100%"
+            height="auto"
+        /></picture>
+        <div class="container">
+          <h3 class="name">Ирина Царева</h3>
+          <p class="exp">таролог, медиум и энергопрактик,</p>
+          <p class="text">
+            обучившая более 157 женщин мастерству Таро и раскрытию дара в
+            течении года
+          </p>
+          <div class="wrapper">
+            <picture
+              ><source
+                srcset="
+                  ./src/img/author/emoji-1x.png 1x,
+                  ./src/img/author/emoji-2x.png 2x
+                "
+                width="48"
+                height="auto" />
+              <img
+                class="wrapper-image"
+                src="./src/img/author/emoji-1x.png"
+                alt="hand"
+                width="48"
+                height="auto"
+            /></picture>
+            <p class="wrapper-title">
+              Моя собственная история — это путь возвращения к себе через силу
+            </p>
+            <p class="wrapper-text">
+              Раскрыв свои способности, я не только исцелила тело и душу, но и
+              обрела женское счастье, карьерную реализацию, купила недвижимость
+              и построила дело, которое люблю
+            </p>
+          </div>
+          <h3 class="subtitle">
+            Я работаю с разными эзотерическими направлениями:
+          </h3>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/author/heart-1x.png 1x,
+                    ./src/img/author/heart-2x.png 2x
+                  "
+                  width="32"
+                  height="auto" />
+                <img
+                  class="heart-image"
+                  src="./src/img/author/heart-1x.png"
+                  alt="heart"
+                  width="32"
+                  height="auto"
+              /></picture>
+              <p class="item-text">Таро и Руны (скандинавский эгрегор)</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/author/heart-1x.png 1x,
+                    ./src/img/author/heart-2x.png 2x
+                  "
+                  width="32"
+                  height="auto" />
+                <img
+                  class="heart-image"
+                  src="./src/img/author/heart-1x.png"
+                  alt="heart"
+                  width="32"
+                  height="auto"
+              /></picture>
+              <p class="item-text">Медиумические практики и Хроники Акаши</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/author/heart-1x.png 1x,
+                    ./src/img/author/heart-2x.png 2x
+                  "
+                  width="32"
+                  height="auto" />
+                <img
+                  class="heart-image"
+                  src="./src/img/author/heart-1x.png"
+                  alt="heart"
+                  width="32"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                Родовая магия, восковые чистки и энергодиагностика
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/author/heart-1x.png 1x,
+                    ./src/img/author/heart-2x.png 2x
+                  "
+                  width="32"
+                  height="auto" />
+                <img
+                  class="heart-image"
+                  src="./src/img/author/heart-1x.png"
+                  alt="heart"
+                  width="32"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                Контакт с Высшими Цивилизациями и Миром Ушедших
+              </p>
+            </li>
+          </ul>
+          <ul class="help-list">
+            <li class="help-item">
+              <p class="help-text">
+                Я помогаю женщинам почувствовать свою силу, обрести опору и
+                понять, куда именно их ведёт их Дар
+              </p>
+            </li>
+            <li class="help-item">
+              <p class="help-text">
+                Мои ученицы приходят с вопросом: «Это у меня дар — или мне
+                кажется?», а уходят с уверенностью, практикой и первыми
+                результатами
+              </p>
+            </li>
+            <li class="help-item">
+              <p class="help-text">
+                Веду свои практики в путешествиях по местам силы по всему миру,
+                соединяя древние знания с современным подходом
+              </p>
+            </li>
+            <li class="help-item">
+              <p class="help-text">
+                <span
+                  >Мой путь — про глубину, силу и реализацию. И я здесь, чтобы
+                  провести тебя по твоему</span
+                >
+              </p>
+            </li>
+          </ul>
+          <a class="btn red" href="">Подробнее</a>
+          <p class="sale-text">скидка -90%</p>
+        </div>
+      </section>
+      <section class="about-course">
+        <div class="container">
+          <h2 class="title">Про курс</h2>
+          <h2 class="subtitle">(что входит)</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-title">Формат:</p>
+              <p class="item-text">короткие видео-уроки 10–15 минут каждый</p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Основные материалы:</p>
+              <p class="item-text">
+                видеоуроки, авторские тесты на диагностику магического дара,
+                практические задания
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Дополнительные материалы:</p>
+              <p class="item-text">
+                чек-листы для самопроверки, мини-гайды по направлениям развития
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Бонусы:</p>
+              <p class="item-text">
+                3 подарка при покупке — доп.практики и поддерживающие материалы
+                для старта
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Активности:</p>
+              <p class="item-text">
+                закрытый Telegram-чат для общения и вопросов
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="program">
+        <div class="container">
+          <h2 class="title">Программа</h2>
+          <h2 class="subtitle">курса</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-number">01</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Открытие дара: как понять, что он у вас уже есть
+                </p>
+                <p class="item-text">
+                  Разберем, какие знаки указывают на скрытые способности
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">02</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Тестирование силы: диагностика через практические задания
+                </p>
+                <p class="item-text">
+                  Выполни авторские тесты и узнай свою сильную сторону
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">03</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Выбор направления: какое искусство тебе ближе — Таро, Руны,
+                  Род, Энергия, Яснознание
+                </p>
+                <p class="item-text">
+                  Подробное описание ключевых направлений и их особенностей
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">04</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Ошибки начинающих: чего избегать в начале пути
+                </p>
+                <p class="item-text">
+                  ТОП-5 распространенных ловушек и как их обойти
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">05</p>
+              <div class="text-box">
+                <p class="item-title">Создание личного плана развития</p>
+                <p class="item-text">
+                  Построение маршрута: что изучать дальше, чтобы раскрыть свой
+                  потенциал
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">06</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Активация дара: первая практика соединения с энергией
+                </p>
+                <p class="item-text">
+                  Мощная медитативная практика для пробуждения интуиции и силы
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">07</p>
+              <div class="text-box">
+                <p class="item-title">
+                  Путь мастера: как начать профессиональный рост в эзотерике
+                </p>
+                <p class="item-text">
+                  Первые шаги к созданию своей практики и помощи другим
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="price"><span>3770грн</span> 377грн</p>
+          <a class="buy-btn" href="">Присоединиться</a>
+        </div>
+      </section>
+      <section class="bonuses">
+        <div class="container">
+          <h2 class="title">
+            Успейте присоединиться до конца обратного отсчета и
+            <span>получить подарки</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Медитация</span> на активацию интуиции
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-02-1x.png 1x,
+                    ./src/img/bonuses/bonus-02-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-02-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Чек-лист</span> «10 признаков открытия дара»
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-03-1x.png 1x,
+                    ./src/img/bonuses/bonus-03-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-03-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                <span>Гайд</span> «Как усилить связь со своим Высшим Я за 7
+                дней»
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-one" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+          <p class="garant">
+            На курс действует 14 дневная гарантия безусловного возврата средств
+          </p>
+        </div>
+      </section>
+      <section class="how-going">
+        <div class="container">
+          <h2 class="title">Как происходит</h2>
+          <h2 class="subtitle">обучение</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-number">01</p>
+              <p class="item-text">
+                После оплаты вы получите письмо с доступом к материалам на
+                указанную почту
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-number">02</p>
+              <p class="item-text">
+                Все материалы откроются сразу — учитесь в своём темпе
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-number">03</p>
+              <p class="item-text">Срок доступа к курсу — 90 дней</p>
+            </li>
+            <li class="list-item">
+              <p class="item-number">04</p>
+              <p class="item-text">
+                Платформа удобная, доступна с телефона, планшета и компьютера
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-number">05</p>
+              <p class="item-text">
+                Уроки короткие, удобные для просмотра даже в плотном графике
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="results">
+        <div class="container">
+          <h2 class="title">Результаты после</h2>
+          <h2 class="subtitle">обучения</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-text">
+                Вы узнаете, в каком направлении у вас
+                <span>раскрывается сила</span>
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Сможете осознанно
+                <span>выбрать своё магическое направление</span> (Таро, Руны,
+                Род, Энергия и др.)
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Получите базовые <span>навыки работы со своим даром</span>
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Составите <span>личный план развития,</span> без лишних курсов и
+                сомнений
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Обретете <span>уверенность в своих способностях</span> и четкое
+                понимание следующего шага
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Получите <span>персональную диагностику ДАРА</span> от автора
+                курса
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2 class="title">Отзывы</h2>
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-01-1x.png 1x,
+                      ./src/img/reviews/review-01-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-01-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-02-1x.png 1x,
+                      ./src/img/reviews/review-02-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-02-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-03-1x.png 1x,
+                      ./src/img/reviews/review-03-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-03-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <h2 class="title">Ответы</h2>
+          <h2 class="subtitle">на вопросы</h2>
+          <div class="questions-container">
+            <ul class="questions-list list">
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="faq-number">[ 01 ]</p>
+                  <p class="questions-item-title">
+                    Подойдет ли мне курс, если я никогда не училась эзотерике?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Да, курс рассчитан как на новичков и на тех, кто
+                      чувствует способности, так и для тех, кто уже в теме
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="faq-number">[ 02 ]</p>
+                  <p class="questions-item-title">
+                    А если я уже что-то изучала, будет ли мне интересно?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Да! Курс поможет систематизировать знания и найти свой
+                      настоящий путь среди множества направлений.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="faq-number">[ 03 ]</p>
+                  <p class="questions-item-title">
+                    Можно ли учиться в удобное для меня время?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Да, все уроки открываются сразу, учиться можно в любое
+                      время и с любого устройства.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="faq-number">[ 04 ]</p>
+                  <p class="questions-item-title">
+                    Сколько времени нужно на курс?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Основная программа рассчитана на 3 дня, но доступ открыт
+                      на 90 дней — вы сможете проходить в своём темпе.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="faq-number">[ 04 ]</p>
+                  <p class="questions-item-title">
+                    Что делать, если курс не подойдет?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Вы можете запросить возврат средств в течение 14 дней
+                      после покупки — без вопросов и условий.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="price"><span>3770грн</span> 377грн</p>
+          <a class="buy-btn" href="">Присоединиться</a>
+        </div>
+      </section>
     </main>
-    <footer class="footer"><div class="container"></div></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="fop-box">
+          <p class="name">ФОП</p>
+          <p class="code">ипн</p>
+        </div>
+        <a class="mail-container" href="mailto:" rel="nofollow" target="_blank"
+          ><img
+            src="./src/img/footer-mail.svg"
+            width="15"
+            height="15"
+            alt="mail"
+          />почта</a
+        >
+        <div class="deals-box">
+          <a href="" target="_blank" rel="nofollow" class="deals-link public"
+            >публичная оферта
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="nofollow"
+            class="deals-link confidence"
+            >политика конфидециальности</a
+          >
+        </div>
+        <a
+          href="https://www.instagram.com/lisabardadym"
+          class="disigner-box"
+          target="_blank"
+          rel="nofollow"
+        >
+          <img src="./src/img/insta.svg" alt="insta" width="25" />
+          <p class="dising">
+            разработка сайта <br />
+            <span>lisa bardadym</span>
+          </p>
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="./src/js/changeDate.js"></script>
+    <script type="module" src="./src/js/timer.js"></script>
+    <script src="./src/js/swiper.js" type="module"></script>
+    <script src="./src/js/questions.js" type="module"></script>
   </body>
 </html>
