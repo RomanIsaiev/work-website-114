@@ -1117,6 +1117,7 @@ body {
 /* footer */
 
 .footer {
+  padding-top: 40px;
   padding-bottom: 60px;
 }
 
